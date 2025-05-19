@@ -617,6 +617,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6266618788313419648, guid: 64e79ca029f2ea54995d7a5d531c1328, type: 3}
+      propertyPath: waterHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266618788313419648, guid: 64e79ca029f2ea54995d7a5d531c1328, type: 3}
       propertyPath: waterHeightVariation
       value: 0.5
       objectReference: {fileID: 0}
