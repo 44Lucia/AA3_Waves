@@ -522,6 +522,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9098360961625796455, guid: f718a10845157ee4da4f4604313f78e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 453379323687485480}
+    - targetCorrespondingSourceObject: {fileID: 9098360961625796455, guid: f718a10845157ee4da4f4604313f78e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 453379323687485485}
   m_SourcePrefab: {fileID: 100100000, guid: f718a10845157ee4da4f4604313f78e8, type: 3}
 --- !u!1 &453379323687485474 stripped
 GameObject:
@@ -550,7 +553,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453379323687485474}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8e33dde2aec3f5449af607edef27d68, type: 3}
   m_Name: 
@@ -560,6 +563,34 @@ MonoBehaviour:
   frequency: 0.3
   phase: 0
   direction: {x: 1, y: 0}
+--- !u!114 &453379323687485485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453379323687485474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a334529228795f4fa21191abc2500ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - amplitude: 0.3
+    wavelength: 2
+    frequency: 0.2
+    phase: 0
+    direction: {x: 1, y: 0}
+  - amplitude: 0.2
+    wavelength: 1.5
+    frequency: 0.2
+    phase: 1.5708
+    direction: {x: 0, y: 1}
+  - amplitude: 0.15
+    wavelength: 1
+    frequency: 0.2
+    phase: 3.1416
+    direction: {x: 1, y: 1}
 --- !u!1001 &5099009199021554181
 PrefabInstance:
   m_ObjectHideFlags: 0
