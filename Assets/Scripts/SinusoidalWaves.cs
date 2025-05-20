@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
-public class SinusoidalWave : MonoBehaviour
+public class SinusoidalWaves : MonoBehaviour
 {
     public float amplitude = 1f;        
     public float wavelength = 5f;     

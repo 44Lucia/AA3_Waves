@@ -2,65 +2,76 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float sprintMultiplier = 3f;
-    [SerializeField] private float mouseSensitivity = 3f;
-    [SerializeField] private float verticalSpeed = 5f;
+    [SerializeField] private GameObject targetToFollow;
 
-    private float rotationX = 0f;
-    private float rotationY = 0f;
+    [Header("Movement")]
+    [SerializeField, Min(0)] private Vector2 distanceLimits = new(1.5f, 50f);
+    [SerializeField, Min(0)] private float m_cameraLerp = 20f;
+    private float m_targetDistance;
+    private float rotationX, rotationY;
 
-    private void Awake()
+    private float timeScaleMultiplier = 1.0f;
+
+    private void Awake() { m_targetDistance = distanceLimits.y / 2; }
+
+    private void LateUpdate()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        HandleRotation();
+        HandleMovement();
+
+        HandleZoom();
+
+        HandleTimeScale();
     }
 
-    private void Update()
+    private void HandleRotation()
     {
-        // wasd
-        float speed = moveSpeed;
-        if (Input.GetKey(KeyCode.LeftShift))
+        // WASD
+        rotationX += Input.GetAxis("Vertical") / 3;
+        rotationY -= Input.GetAxis("Horizontal") / 3;
+
+        // MOUSE DELTA
+        if (Input.GetMouseButton(0)) // drag screen
         {
-            speed *= sprintMultiplier; // Más rápido si se mantiene Shift
+            rotationX -= Input.GetAxis("Mouse Y") * 2.0f;
+            rotationY += Input.GetAxis("Mouse X") * 2.0f;
         }
 
-        Vector3 forward = transform.forward;
-        Vector3 right = transform.right;
+        rotationX = Mathf.Clamp(rotationX, -40, 50f); // -40,50 --> camera angle limits
+        transform.eulerAngles = new(rotationX, rotationY, 0);
+    }
 
-        Vector3 moveDir = Vector3.zero;
-        if (Input.GetKey(KeyCode.W)) { moveDir += forward; }
-        if (Input.GetKey(KeyCode.S)) { moveDir -= forward; }
-        if (Input.GetKey(KeyCode.D)) { moveDir += right; }
-        if (Input.GetKey(KeyCode.A)) { moveDir -= right; }
+    private void HandleMovement()
+    {
+        transform.position = Vector3.Lerp(
+            transform.position,
+            targetToFollow.transform.position - transform.forward * m_targetDistance,
+            m_cameraLerp * Time.deltaTime
+        );
+    }
 
-        moveDir = moveDir.normalized * speed * Time.deltaTime;
+    private void HandleZoom()
+    {
+        m_targetDistance -= Input.mouseScrollDelta.y;
 
-        // up and down
-        if (Input.GetKey(KeyCode.E)) { moveDir += Vector3.up * verticalSpeed * Time.deltaTime; }
-        if (Input.GetKey(KeyCode.Q)) { moveDir -= Vector3.up * verticalSpeed * Time.deltaTime; }
+        if (Input.GetKey(KeyCode.DownArrow)) { m_targetDistance += 0.1f; } // v = -zoom
+        else if (Input.GetKey(KeyCode.UpArrow)) { m_targetDistance -= 0.1f; } // ^ = +zoom
 
-        transform.position += moveDir;
+        m_targetDistance = Mathf.Clamp(m_targetDistance, distanceLimits.x, distanceLimits.y); // zoom limits
+    }
 
-        // Rotación con mouse
-        rotationX += Input.GetAxis("Mouse X") * mouseSensitivity;
-        rotationY += Input.GetAxis("Mouse Y") * mouseSensitivity;
-        rotationY = Mathf.Clamp(rotationY, -90f, 90f); // angle limit
-
-        transform.localRotation = Quaternion.Euler(-rotationY, rotationX, 0f);
-
-        // toggle cursor visibility
-        if (Input.GetKeyDown(KeyCode.Escape))
+    private void HandleTimeScale()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
         {
-            if (Cursor.lockState == CursorLockMode.Locked)
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                return;
-            }
+            timeScaleMultiplier *= 2.0f;
+            Time.timeScale = Mathf.Clamp(timeScaleMultiplier, 1.0f, 16.0f);
+        }
 
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            timeScaleMultiplier = 1.0f;
+            Time.timeScale = 1.0f;
         }
     }
 }
