@@ -168,6 +168,9 @@
             "m_Id": "d406d740ee3540adb36cdb49d395d70e"
         },
         {
+            "m_Id": "13dc9b91ad4e491ea71ed79e23f9048b"
+        },
+        {
             "m_Id": "6ce9d14e7a224f8b9002370e0c972938"
         },
         {
@@ -190,9 +193,6 @@
         },
         {
             "m_Id": "848463b58ed94fd08cf557c59bcb49a2"
-        },
-        {
-            "m_Id": "13dc9b91ad4e491ea71ed79e23f9048b"
         },
         {
             "m_Id": "a1f25d0d3d9143969e9ab5e262017656"
@@ -1744,7 +1744,6 @@
     "m_OutputNode": {
         "m_Id": ""
     },
-    "m_SubDatas": [],
     "m_ActiveTargets": [
         {
             "m_Id": "3ef3f7a23a6d4900871c6aa5b0eed1a4"
@@ -1969,10 +1968,10 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.1256888210773468,
-        "g": 0.13104574382305146,
-        "b": 0.47924530506134035,
-        "a": 0.0
+        "r": 0.0,
+        "g": 0.5711250305175781,
+        "b": 0.7083760499954224,
+        "a": 1.0
     },
     "isMainColor": false,
     "m_ColorMode": 1
@@ -1999,8 +1998,8 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": 0.009999999776482582,
+        "y": 0.009999999776482582,
         "z": 0.0,
         "w": 0.0
     }
@@ -2092,7 +2091,7 @@
     "m_RefNameGeneratedByDisplayName": "ReflectionMap",
     "m_DefaultReferenceName": "_ReflectionMap",
     "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": false,
+    "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
     "m_DismissedVersion": 0,
@@ -2146,7 +2145,7 @@
     "m_KeywordScope": 0,
     "m_KeywordStages": 63,
     "m_Entries": [],
-    "m_Value": 0,
+    "m_Value": 1,
     "m_IsEditable": true
 }
 
@@ -2195,10 +2194,10 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.0005352272419258952,
-        "g": 0.0,
-        "b": 0.28301888704299929,
-        "a": 0.0
+        "r": 0.21881218254566194,
+        "g": 0.21216797828674317,
+        "b": 0.4867923855781555,
+        "a": 0.41960784792900088
     },
     "isMainColor": false,
     "m_ColorMode": 1
@@ -2379,7 +2378,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 0.1599999964237213,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -2391,7 +2390,7 @@
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "13dc9b91ad4e491ea71ed79e23f9048b",
-    "m_Name": "Waves",
+    "m_Name": "Waves Parameters",
     "m_ChildObjectList": [
         {
             "m_Id": "d7575d395b96466ea902e67bce188564"
@@ -2527,7 +2526,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "177cf3a8fd5c451eb5a04bdbfd15453e",
     "m_Id": 0,
-    "m_DisplayName": "WaveSteepness",
+    "m_DisplayName": "WaveAmplitude",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2557,7 +2556,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 1.2699999809265137,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -2849,10 +2848,10 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.9320754408836365,
-        "g": 0.9320754408836365,
-        "b": 0.9320754408836365,
-        "a": 0.0
+        "r": 1.7129307985305787,
+        "g": 1.7129307985305787,
+        "b": 1.7129307985305787,
+        "a": 0.27843138575553896
     },
     "isMainColor": false,
     "m_ColorMode": 1
@@ -3007,7 +3006,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "x": 0.0,
+        "x": -0.44999998807907107,
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
@@ -3144,10 +3143,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 4804.0,
-            "y": -10.400008201599121,
-            "width": 137.60009765625,
-            "height": 33.600006103515628
+            "x": 6124.0,
+            "y": 183.0,
+            "width": 138.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -3336,7 +3335,7 @@
     "m_KeywordScope": 0,
     "m_KeywordStages": 63,
     "m_Entries": [],
-    "m_Value": 0,
+    "m_Value": 1,
     "m_IsEditable": true
 }
 
@@ -3678,7 +3677,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": 10.0,
-    "m_FloatType": 1,
+    "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
         "y": 300.0
@@ -3831,9 +3830,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.0005352272419258952,
+        "r": 0.0,
         "g": 0.0,
-        "b": 0.28301888704299929,
+        "b": 0.0,
         "a": 0.0
     },
     "isMainColor": false,
@@ -3934,7 +3933,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 1.6100000143051148,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -4003,10 +4002,10 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.0,
-        "g": 0.5938670039176941,
-        "b": 2.491030693054199,
-        "a": 0.686274528503418
+        "r": 1.1486984491348267,
+        "g": 1.1486984491348267,
+        "b": 1.1486984491348267,
+        "a": 1.0
     },
     "isMainColor": false,
     "m_ColorMode": 1
@@ -4067,7 +4066,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "4052fa74569c4bd99396a40e936c94b0",
     "m_Id": 0,
-    "m_DisplayName": "WaveLength",
+    "m_DisplayName": "WaveFrequence",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -4188,7 +4187,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 1.4800000190734864,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -4294,10 +4293,10 @@
     "m_Guid": {
         "m_GuidSerialized": "c1012b2a-6da7-4641-b0d3-90ca8bad0c21"
     },
-    "m_Name": "WaveDirections",
+    "m_Name": "WaveDirection",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "WaveDirections",
-    "m_DefaultReferenceName": "_WaveDirections",
+    "m_RefNameGeneratedByDisplayName": "WaveDirection",
+    "m_DefaultReferenceName": "_WaveDirection",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -4416,9 +4415,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.03993590921163559,
-        "g": 0.04130278155207634,
-        "b": 0.2981131076812744,
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
         "a": 0.0
     },
     "isMainColor": false,
@@ -4572,7 +4571,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"cc833db1ba1caeb4bb10ff0a50364204\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -4790,7 +4789,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"834c2a530966bd34eb9762c13c919276\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -4900,10 +4899,10 @@
     "m_Guid": {
         "m_GuidSerialized": "38790335-04a3-4f37-83b8-40c8678453fe"
     },
-    "m_Name": "WaveSpeed",
+    "m_Name": "WavePhase",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "WaveSpeed",
-    "m_DefaultReferenceName": "_WaveSpeed",
+    "m_RefNameGeneratedByDisplayName": "WavePhase",
+    "m_DefaultReferenceName": "_WavePhase",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -5163,10 +5162,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 4804.0,
-            "y": -40.79999923706055,
-            "width": 140.80029296875,
-            "height": 33.60000228881836
+            "x": 6124.0,
+            "y": 152.0,
+            "width": 141.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -6083,7 +6082,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 0.38999998569488528,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -6176,7 +6175,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"834c2a530966bd34eb9762c13c919276\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -6256,7 +6255,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 0.009999999776482582,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -6580,10 +6579,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 5078.400390625,
-            "y": -40.79999923706055,
-            "width": 312.7998046875,
-            "height": 350.3999938964844
+            "x": 6313.0,
+            "y": 89.99998474121094,
+            "width": 313.0,
+            "height": 349.99993896484377
         }
     },
     "m_Slots": [
@@ -6605,7 +6604,7 @@
     ],
     "synonyms": [],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -6836,7 +6835,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
+    "m_Value": 0.3799999952316284,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -7057,7 +7056,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 0.1599999964237213,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -7257,10 +7256,10 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 1.8792452812194825,
-        "g": 1.8792452812194825,
-        "b": 1.8792452812194825,
-        "a": 0.5333333611488342
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 0.3176470696926117
     },
     "isMainColor": false,
     "m_ColorMode": 1
@@ -7333,7 +7332,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 0.6499999761581421,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -7361,7 +7360,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
+    "m_Value": 1.7100000381469727,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -7747,7 +7746,7 @@
     "m_KeywordScope": 0,
     "m_KeywordStages": 63,
     "m_Entries": [],
-    "m_Value": 0,
+    "m_Value": 1,
     "m_IsEditable": true
 }
 
@@ -8052,7 +8051,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "bde174412f0149cbb214c66d786cb3a3",
     "m_Id": 0,
-    "m_DisplayName": "WaveSpeed",
+    "m_DisplayName": "WavePhase",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -8145,7 +8144,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 0.3799999952316284,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -8173,8 +8172,8 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 10.0,
-    "m_FloatType": 1,
+    "m_Value": 50.0,
+    "m_FloatType": 0,
     "m_RangeValues": {
         "x": 1.0,
         "y": 200.0
@@ -8344,8 +8343,8 @@
     "m_ObjectId": "c63484b628e54536939ae2838e52d66b",
     "m_Title": "WAVES MOVEMENT",
     "m_Position": {
-        "x": 4778.39990234375,
-        "y": -130.40005493164063
+        "x": 6014.0,
+        "y": 2.0
     }
 }
 
@@ -8524,10 +8523,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 4804.0,
-            "y": 19.199981689453126,
-            "width": 158.400390625,
-            "height": 33.60004425048828
+            "x": 6124.0,
+            "y": 212.0,
+            "width": 159.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -8630,10 +8629,10 @@
     "m_Guid": {
         "m_GuidSerialized": "586455e4-15e6-4a81-9440-891bb3967256"
     },
-    "m_Name": "WaveLength",
+    "m_Name": "WaveFrequence",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "WaveLength",
-    "m_DefaultReferenceName": "_WaveLength",
+    "m_RefNameGeneratedByDisplayName": "WaveFrequence",
+    "m_DefaultReferenceName": "_WaveFrequence",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -8796,7 +8795,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 12.34000015258789,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -8898,10 +8897,10 @@
     "m_Guid": {
         "m_GuidSerialized": "68d30e30-2d34-4f33-b30b-3f7639660d58"
     },
-    "m_Name": "WaveSteepness",
+    "m_Name": "WaveAmplitude",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "WaveSteepness",
-    "m_DefaultReferenceName": "_WaveSteepness",
+    "m_RefNameGeneratedByDisplayName": "WaveAmplitude",
+    "m_DefaultReferenceName": "_WaveAmplitude",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -8911,7 +8910,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 5.0,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -9197,8 +9196,8 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 5.0,
-    "m_FloatType": 1,
+    "m_Value": 78.0,
+    "m_FloatType": 0,
     "m_RangeValues": {
         "x": 1.0,
         "y": 200.0
@@ -9382,10 +9381,10 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.9320754408836365,
-        "g": 0.9320754408836365,
-        "b": 0.9320754408836365,
-        "a": 0.0
+        "r": 0.0,
+        "g": 0.002903101034462452,
+        "b": 0.1924527883529663,
+        "a": 0.40784314274787905
     },
     "isMainColor": false,
     "m_ColorMode": 1
@@ -9475,7 +9474,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
+    "m_Value": 3.569999933242798,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -9920,7 +9919,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
+    "m_Value": 2.430000066757202,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -9948,7 +9947,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.0,
+    "m_Value": 0.5299999713897705,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -10040,10 +10039,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 4804.0,
-            "y": -70.40003204345703,
-            "width": 159.2001953125,
-            "height": 33.600006103515628
+            "x": 6124.0,
+            "y": 123.0,
+            "width": 160.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -10294,7 +10293,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "fd24b275b3df447c9c8c92bc360943ff",
     "m_Id": 0,
-    "m_DisplayName": "WaveDirections",
+    "m_DisplayName": "WaveDirection",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -10334,8 +10333,8 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
-    "m_FloatType": 1,
+    "m_Value": 0.6000000238418579,
+    "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
         "y": 1.0
