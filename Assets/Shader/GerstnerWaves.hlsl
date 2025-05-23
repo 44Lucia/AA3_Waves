@@ -6,12 +6,13 @@ void GerstnerWaves_float(
     float speed,
     float steepness,
     float time,
+    float phase,
     out float3 offset,
     out float3 normal)
 {
     float2 D = normalize(direction);
     float k = 2.0 * 3.14159265 / wavelength;
-    float phi = k * dot(D, position.xz) - speed * k * time;
+    float phi = k * dot(D, position.xz) - speed * k * time + phase;
 
     float cosPhi = cos(phi);
     float sinPhi = sin(phi);

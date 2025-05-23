@@ -125,6 +125,7 @@ Material:
     - _NormalStrength: 1.71
     - _OrthographicCamSize: 0
     - _PERSPECTIVE: 1
+    - _Phase: 0
     - _PosterizeSteps: 0
     - _QueueControl: 1
     - _QueueOffset: -49
@@ -164,7 +165,7 @@ Material:
     - _CaveScale: {r: 0.01, g: 0.01, b: 0, a: 0}
     - _CaveSecondaryColor: {r: 0, g: 0, b: 0, a: 0}
     - _DeepColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Direction: {r: 0.8, g: 1, b: 0, a: 0}
+    - _Direction: {r: 0.83, g: 1, b: 0, a: 0}
     - _FoamUVsOffset: {r: 1, g: 1, b: 0, a: 0}
     - _FresnelColor: {r: 2.670157, g: 2.670157, b: 2.670157, a: 0}
     - _HorizonColor: {r: 7.3772106, g: 3.6607668, b: 6.6577153, a: 1}

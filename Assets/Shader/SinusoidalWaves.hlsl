@@ -5,12 +5,13 @@ void SinusoidalWaves_float(
     float wavelength,
     float speed,
     float time,
+    float phase,
     out float3 offset,
     out float3 normal)
 {
     float2 D = normalize(direction);
     float k = 2.0 * 3.14159265 / wavelength;
-    float phi = k * dot(D, position.xz) - speed * k * time;
+    float phi = k * dot(D, position.xz) - speed * k * time + phase;
 
     offset = float3(0.0, amplitude * sin(phi), 0.0);
 

@@ -149,6 +149,9 @@
         },
         {
             "m_Id": "d4cb1ee8f4c2401e84e8cfc94d79a1c1"
+        },
+        {
+            "m_Id": "ff5465a5bfd449709527bbc61f4e051a"
         }
     ],
     "m_Keywords": [
@@ -459,6 +462,9 @@
         },
         {
             "m_Id": "574e5451383542648803d517a1b1ac1b"
+        },
+        {
+            "m_Id": "a5713b4ada10429caebd322f5b879a7f"
         }
     ],
     "m_GroupDatas": [
@@ -1255,6 +1261,20 @@
                     "m_Id": "d89884addcfd45b3a3bb66e8d985f007"
                 },
                 "m_SlotId": 1
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "a5713b4ada10429caebd322f5b879a7f"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "8cc4ddbd21a94c5ca67f67baec8a0d11"
+                },
+                "m_SlotId": 979262173
             }
         },
         {
@@ -2457,6 +2477,9 @@
         },
         {
             "m_Id": "d4cb1ee8f4c2401e84e8cfc94d79a1c1"
+        },
+        {
+            "m_Id": "ff5465a5bfd449709527bbc61f4e051a"
         }
     ]
 }
@@ -3634,6 +3657,21 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "354c19419e2f476582d9f71d239ef540",
+    "m_Id": 979262173,
+    "m_DisplayName": "Phase",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Phase",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "356b877dd8e2453c8037fed5c4738b25",
     "m_Group": {
@@ -3934,6 +3972,21 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "3c6c1cc4705b413e88f592de61d27809",
+    "m_Id": 0,
+    "m_DisplayName": "Phase",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
 }
 
 {
@@ -6700,6 +6753,9 @@
             "m_Id": "e5e23a8f5ceb4c43a8ca167e85fe1245"
         },
         {
+            "m_Id": "354c19419e2f476582d9f71d239ef540"
+        },
+        {
             "m_Id": "37135461a7404fd396037354d5493088"
         }
     ],
@@ -6719,7 +6775,8 @@
         "c788c2bf-3a99-45af-93c0-933c35285bca",
         "35fa10c1-edd3-45a2-9ec9-0097beb04cfb",
         "7c807306-18fe-47b0-84c4-75fe1605d144",
-        "32306edf-fff8-476e-b44b-f27828fd8572"
+        "32306edf-fff8-476e-b44b-f27828fd8572",
+        "605ee94f-caa1-4be0-8923-6b10ba5a8b01"
     ],
     "m_PropertyIds": [
         -1175589154,
@@ -6728,7 +6785,8 @@
         1961824384,
         471106610,
         -2120963478,
-        2133403579
+        2133403579,
+        979262173
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
@@ -7393,6 +7451,42 @@
     },
     "isMainColor": false,
     "m_ColorMode": 1
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "a5713b4ada10429caebd322f5b879a7f",
+    "m_Group": {
+        "m_Id": "c63484b628e54536939ae2838e52d66b"
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 6138.0,
+            "y": 317.0,
+            "width": 107.0,
+            "height": 33.999969482421878
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "3c6c1cc4705b413e88f592de61d27809"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "ff5465a5bfd449709527bbc61f4e051a"
+    }
 }
 
 {
@@ -10585,6 +10679,34 @@
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "ff5465a5bfd449709527bbc61f4e051a",
+    "m_Guid": {
+        "m_GuidSerialized": "6bb10a83-eabe-4e38-b845-aaceea970fdf"
+    },
+    "m_Name": "Phase",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Phase",
+    "m_DefaultReferenceName": "_Phase",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
 }
 
 {
