@@ -458,7 +458,7 @@ RectTransform:
   m_Children:
   - {fileID: 4637337750673301388}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -540,8 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59b19d49bd735b41b5296791219fabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gerstnerWaves: {fileID: 0}
-  sinusoidalWaves: {fileID: 0}
+  waterMaterial: {fileID: 2100000, guid: 867ec64eba6038b4e95709fa94008027, type: 2}
   simulationText: {fileID: 7908253019733353753}
 --- !u!1 &9169152651638075757
 GameObject:

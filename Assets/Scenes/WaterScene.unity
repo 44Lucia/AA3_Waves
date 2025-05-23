@@ -836,21 +836,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6445071022226428473, guid: 087a303ba2c525e4f959842ce03edd8e, type: 3}
-      propertyPath: gerstnerWaves
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6445071022226428473, guid: 087a303ba2c525e4f959842ce03edd8e, type: 3}
-      propertyPath: sinusoidalWaves
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6650085215791294485, guid: 087a303ba2c525e4f959842ce03edd8e, type: 3}
       propertyPath: m_Name
       value: Canvitas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6650085215791294485, guid: 087a303ba2c525e4f959842ce03edd8e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8959098794606495734, guid: 087a303ba2c525e4f959842ce03edd8e, type: 3}
       propertyPath: m_Pivot.x

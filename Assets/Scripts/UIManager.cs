@@ -5,9 +5,8 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-    [Header("Simulation Scripts")]
-    [SerializeField] private GerstnerWaves gerstnerWaves;
-    [SerializeField] private SinusoidalWaves sinusoidalWaves;
+    [Header("Simulation material")]
+    [SerializeField] private Material waterMaterial;
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI simulationText;
@@ -18,7 +17,7 @@ public class UIManager : MonoBehaviour
         {
             Instance = this;
 
-            if (gerstnerWaves.enabled) { simulationText.text = "Gerstner Waves"; }
+            if (waterMaterial.GetFloat("_useGerstner") == 1f) { simulationText.text = "Gerstner Waves"; }
             else { simulationText.text = "Sinusoidal Waves"; }
 
             return;
@@ -29,10 +28,15 @@ public class UIManager : MonoBehaviour
 
     public void ToggleSimulation()
     {
-        gerstnerWaves.enabled = !gerstnerWaves.enabled;
-        sinusoidalWaves.enabled = !sinusoidalWaves.enabled;
-
-        if (gerstnerWaves.enabled) { simulationText.text = "Gerstner Waves"; }
-        else { simulationText.text = "Sinusoidal Waves"; }
+        if (waterMaterial.GetFloat("_useGerstner") == 0f)
+        {
+            waterMaterial.SetFloat("_useGerstner", 1f);
+            simulationText.text = "Gerstner Waves";
+        }
+        else
+        {
+            waterMaterial.SetFloat("_useGerstner", 0f);
+            simulationText.text = "Sinusoidal Waves";
+        }
     }
 }
