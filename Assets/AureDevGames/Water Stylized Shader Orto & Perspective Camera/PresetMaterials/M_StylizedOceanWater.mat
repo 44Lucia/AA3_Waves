@@ -146,10 +146,10 @@ Material:
     - _WaterAlpha: 1
     - _WaterMetallic: 0.559
     - _WaterSmoothness: 0.581
-    - _WaveAmplitude: 5
-    - _WaveFrequence: 1.5
+    - _WaveAmplitude: 2
+    - _WaveFrequence: 1.235
     - _WaveLength: 3
-    - _WavePhase: 0.8
+    - _WavePhase: 1
     - _WaveSpeed: 0.6
     - _WaveSteepness: 15
     - _WaveStepness: 0.35
@@ -172,6 +172,6 @@ Material:
     - _TopColor: {r: 0, g: 0.17848217, b: 0.5622641, a: 0.44705883}
     - _UV: {r: 0, g: 0, b: 0, a: 0}
     - _UVRipples: {r: 0, g: 0, b: 0, a: 0}
-    - _WaveDirection: {r: 1, g: 1, b: 1, a: 1}
+    - _WaveDirection: {r: 1, g: 0, b: 0, a: 0}
     - _WaveDirections: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
