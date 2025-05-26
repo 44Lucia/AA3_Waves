@@ -125,4 +125,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   water: {fileID: 0}
-  floatStrength: 8
+  objectVolume: 0.52
+  objectHeight: 1
+  objectHeightOffset: -1

@@ -32,11 +32,11 @@ public class UIManager : MonoBehaviour
         {
             waterMaterial.SetFloat("_useGerstner", 1f);
             simulationText.text = "Gerstner Waves";
+
+            return;
         }
-        else
-        {
-            waterMaterial.SetFloat("_useGerstner", 0f);
-            simulationText.text = "Sinusoidal Waves";
-        }
+
+        waterMaterial.SetFloat("_useGerstner", 0f);
+        simulationText.text = "Sinusoidal Waves";
     }
 }

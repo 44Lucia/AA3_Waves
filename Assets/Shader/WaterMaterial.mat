@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_StylizedOceanWater
+  m_Name: WaterMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 8eef88ae773ef5f4dbe4da56da89303b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -157,7 +157,7 @@ Material:
     - _WaveSpeed: 0.6
     - _WaveSteepness: 15
     - _WaveStepness: 0.35
-    - _useGerstner: 1
+    - _useGerstner: 0
     m_Colors:
     - _BaseColor: {r: 0, g: 0.1989687, b: 1.110646, a: 1}
     - _CaveColor: {r: 0.21881218, g: 0.21216798, b: 0.4867924, a: 0.41960785}
