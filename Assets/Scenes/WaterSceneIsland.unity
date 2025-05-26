@@ -2887,6 +2887,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1767841092945693504, guid: 0b6231c4c580502459334ec0466d7117, type: 3}
   m_PrefabInstance: {fileID: 2067500369}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2134169592 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7305107937925790516, guid: 6f22744c483bfaf45b342ae75c42efb3, type: 3}
+  m_PrefabInstance: {fileID: 1961819259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2138014273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2987,6 +2992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boya
       objectReference: {fileID: 0}
+    - target: {fileID: 6792634033021674401, guid: 16fcb400f4a5fc2429c905dea50e0fd2, type: 3}
+      propertyPath: water
+      value: 
+      objectReference: {fileID: 2134169592}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4469,6 +4478,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Raft
       objectReference: {fileID: 0}
+    - target: {fileID: 6958726369579031888, guid: 542cd1118131c064e8111be15d9273c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5075,15 +5088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f00757bc3dce824fa26206670cde47c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floaters: []
-  underWaterDrag: 3
-  underWaterAngularDrag: 1
-  airWaterDrag: 0
-  airWaterAngularDrag: 0.05
-  floatingPower: 15
-  baseWaterHeight: 0
-  waterHeightVariation: 2
-  waveSpeed: 1
+  water: {fileID: 0}
+  floatStrength: 10
 --- !u!54 &8500765532333855645
 Rigidbody:
   m_ObjectHideFlags: 0
