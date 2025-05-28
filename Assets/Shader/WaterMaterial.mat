@@ -97,7 +97,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _A_SHORT_HIKE_MODE: 0
-    - _Amplitude: 1
+    - _Amplitude: 1.3
     - _BOILING: 0
     - _BoilingSpeed: 0
     - _BoilingStrength: 1
@@ -138,7 +138,7 @@ Material:
     - _RippleStrength: 83.62
     - _SecondaryFoamBlend: 0.06
     - _SkyboxForce: 2.5
-    - _Speed: 7
+    - _Speed: 8
     - _Stepness: 10
     - _Steps: 50
     - _SurfaceFoamDirection: 0
@@ -165,7 +165,7 @@ Material:
     - _CaveScale: {r: 0.01, g: 0.01, b: 0, a: 0}
     - _CaveSecondaryColor: {r: 0, g: 0, b: 0, a: 0}
     - _DeepColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Direction: {r: 1, g: 0, b: 0, a: 0}
+    - _Direction: {r: 1, g: 0.6, b: 0, a: 0}
     - _FoamUVsOffset: {r: 1, g: 1, b: 0, a: 0}
     - _FresnelColor: {r: 2.670157, g: 2.670157, b: 2.670157, a: 0}
     - _HorizonColor: {r: 7.3772106, g: 3.6607668, b: 6.6577153, a: 1}

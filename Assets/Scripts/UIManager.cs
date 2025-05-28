@@ -6,7 +6,8 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
 
     [Header("Simulation material")]
-    [SerializeField] private Material waterMaterial;
+    [SerializeField] private Renderer waterRenderer;
+    private Material instanceMaterial;
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI simulationText;
@@ -17,8 +18,12 @@ public class UIManager : MonoBehaviour
         {
             Instance = this;
 
-            if (waterMaterial.GetFloat("_useGerstner") == 1f) { simulationText.text = "Gerstner Waves"; }
-            else { simulationText.text = "Sinusoidal Waves"; }
+            instanceMaterial = waterRenderer.material;
+
+            if (instanceMaterial.GetFloat("_useGerstner") == 1f)
+                simulationText.text = "Gerstner Waves";
+            else
+                simulationText.text = "Sinusoidal Waves";
 
             return;
         }
@@ -28,15 +33,14 @@ public class UIManager : MonoBehaviour
 
     public void ToggleSimulation()
     {
-        if (waterMaterial.GetFloat("_useGerstner") == 0f)
+        if (instanceMaterial.GetFloat("_useGerstner") == 0f)
         {
-            waterMaterial.SetFloat("_useGerstner", 1f);
+            instanceMaterial.SetFloat("_useGerstner", 1f);
             simulationText.text = "Gerstner Waves";
-
             return;
         }
 
-        waterMaterial.SetFloat("_useGerstner", 0f);
+        instanceMaterial.SetFloat("_useGerstner", 0f);
         simulationText.text = "Sinusoidal Waves";
     }
 }
