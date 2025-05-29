@@ -18,6 +18,14 @@ public class FloatingObject : MonoBehaviour
     private static readonly int PhaseID = Shader.PropertyToID("_Phase");
     private static readonly int UseGerstnerID = Shader.PropertyToID("_useGerstner");
 
+    // get shader parameters
+    float A;
+    float L;
+    float S;
+    Vector2 D;
+    float phi;
+    bool useGerstner;
+
     private Rigidbody rb;
     private Material waterMaterial;
 
@@ -27,20 +35,14 @@ public class FloatingObject : MonoBehaviour
 
         if (water.TryGetComponent(out Renderer renderer)) { waterMaterial = renderer.material; }
         else { Debug.LogError("No renderer found on the water object"); }
+
+        UpdateShaderVariables();
     }
 
-    void FixedUpdate()
+    private void Update() { UpdateShaderVariables(); }
+
+    private void FixedUpdate()
     {
-        if (waterMaterial == null) { return; }
-
-        // get shader parameters
-        float A = waterMaterial.GetFloat(AmplitudeID);
-        float L = waterMaterial.GetFloat(WavelengthID);
-        float S = waterMaterial.GetFloat(SpeedID);
-        Vector2 D = waterMaterial.GetVector(DirectionID);
-        float phi = waterMaterial.GetFloat(PhaseID);
-        bool useGerstner = waterMaterial.GetFloat(UseGerstnerID) == 1f;
-
         Debug.Log($"A: {A}, L: {L}, S: {S}, D: {D}, phi: {phi}, useGerstner: {useGerstner}");
 
         // calculate flotability
@@ -82,5 +84,18 @@ public class FloatingObject : MonoBehaviour
 
             rb.AddForce(Vector3.up * buoyantForceMagnitude, ForceMode.Acceleration);
         }
+    }
+
+    private void UpdateShaderVariables()
+    {
+        if (waterMaterial == null) { return; }
+
+        // get shader parameters
+        A = waterMaterial.GetFloat(AmplitudeID);
+        L = waterMaterial.GetFloat(WavelengthID);
+        S = waterMaterial.GetFloat(SpeedID);
+        D = waterMaterial.GetVector(DirectionID);
+        phi = waterMaterial.GetFloat(PhaseID);
+        useGerstner = waterMaterial.GetFloat(UseGerstnerID) == 1f;
     }
 }
