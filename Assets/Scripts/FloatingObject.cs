@@ -48,30 +48,30 @@ public class FloatingObject : MonoBehaviour
         // calculate flotability
         D.Normalize();
         float k = 2 * Mathf.PI / L;
-        Vector3 pos = transform.position;
+        Vector3 pos = transform.position;     
         float dot = Vector2.Dot(D, new Vector2(pos.x, pos.z));
         float f = k * (dot - S * Time.time) + phi;
+        float cosF = Mathf.Cos(f);
+        float sinF = Mathf.Sin(f);
 
         float waterHeight;
 
         // apply flotability
         if (useGerstner)
         {
-            float cosF = Mathf.Cos(f);
-            float sinF = Mathf.Sin(f);
-
             Vector3 displacedPos = pos;
             displacedPos.x += A * D.x * cosF;
             displacedPos.y += A * sinF;
             displacedPos.z += A * D.y * cosF;
 
             waterHeight = displacedPos.y;
-
-            Vector3 tangent = new(-D.x * k * A * cosF, 1f, -D.y * k * A * cosF);
-            Quaternion tilt = Quaternion.FromToRotation(Vector3.up, tangent.normalized);
-            rb.MoveRotation(Quaternion.Slerp(rb.rotation, tilt, Time.fixedDeltaTime * 2f));
         }
         else { waterHeight = A * Mathf.Sin(f); }
+
+        // rotate the object to align with the wave
+        Vector3 tangent = new(-D.x * k * A * cosF, 1f, -D.y * k * A * cosF);
+        Quaternion tilt = Quaternion.FromToRotation(Vector3.up, tangent.normalized);
+        rb.MoveRotation(Quaternion.Slerp(rb.rotation, tilt, Time.fixedDeltaTime * 2f));
 
         float objectBottom = pos.y - objectHeightOffset;
         float immersion = waterHeight - objectBottom;

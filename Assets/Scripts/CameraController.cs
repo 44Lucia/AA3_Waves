@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private GameObject targetToFollow;
+    [SerializeField] private GameObject[] targetsToFollow;
+    private int currentTargetIndex = 0;
 
     [Header("Movement")]
     [SerializeField, Min(0)] private Vector2 distanceLimits = new(1.5f, 50f);
@@ -16,11 +17,13 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (targetsToFollow.Length == 0) { return; } // no targets to follow
+
         HandleRotation();
         HandleMovement();
 
         HandleZoom();
-
+        HandleTargetSelection();
         HandleTimeScale();
     }
 
@@ -45,7 +48,7 @@ public class CameraController : MonoBehaviour
     {
         transform.position = Vector3.Lerp(
             transform.position,
-            targetToFollow.transform.position - transform.forward * m_targetDistance,
+            targetsToFollow[currentTargetIndex].transform.position - transform.forward * m_targetDistance,
             m_cameraLerp * Time.deltaTime
         );
     }
@@ -58,6 +61,22 @@ public class CameraController : MonoBehaviour
         else if (Input.GetKey(KeyCode.UpArrow)) { m_targetDistance -= 0.1f; } // ^ = +zoom
 
         m_targetDistance = Mathf.Clamp(m_targetDistance, distanceLimits.x, distanceLimits.y); // zoom limits
+    }
+
+    private void HandleTargetSelection()
+    {
+        if (targetsToFollow.Length == 0) { return; } // no targets to follow
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            currentTargetIndex++;
+            if (currentTargetIndex >= targetsToFollow.Length) { currentTargetIndex = 0; }
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            currentTargetIndex--;
+            if (currentTargetIndex < 0) { currentTargetIndex = targetsToFollow.Length - 1; }
+        }
     }
 
     private void HandleTimeScale()

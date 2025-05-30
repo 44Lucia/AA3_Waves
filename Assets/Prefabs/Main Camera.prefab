@@ -150,7 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f69c5418a30a984086868e01088558c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  sprintMultiplier: 3
-  mouseSensitivity: 3
-  verticalSpeed: 5
+  targetsToFollow:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  distanceLimits: {x: 1.5, y: 50}
+  m_cameraLerp: 20
