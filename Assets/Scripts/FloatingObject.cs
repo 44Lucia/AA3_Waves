@@ -43,30 +43,14 @@ public class FloatingObject : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log($"A: {A}, L: {L}, S: {S}, D: {D}, phi: {phi}, useGerstner: {useGerstner}");
-
         // calculate flotability
         D.Normalize();
         float k = 2 * Mathf.PI / L;
-        Vector3 pos = transform.position;     
-        float dot = Vector2.Dot(D, new Vector2(pos.x, pos.z));
+        Vector3 pos = transform.position;
+        float dot = Vector2.Dot(D, new(pos.x, pos.z));
         float f = k * (dot - S * Time.time) + phi;
         float cosF = Mathf.Cos(f);
         float sinF = Mathf.Sin(f);
-
-        float waterHeight;
-
-        // apply flotability
-        if (useGerstner)
-        {
-            Vector3 displacedPos = pos;
-            displacedPos.x += A * D.x * cosF;
-            displacedPos.y += A * sinF;
-            displacedPos.z += A * D.y * cosF;
-
-            waterHeight = displacedPos.y;
-        }
-        else { waterHeight = A * Mathf.Sin(f); }
 
         // rotate the object to align with the wave
         Vector3 tangent = new(-D.x * k * A * cosF, 1f, -D.y * k * A * cosF);
@@ -74,7 +58,7 @@ public class FloatingObject : MonoBehaviour
         rb.MoveRotation(Quaternion.Slerp(rb.rotation, tilt, Time.fixedDeltaTime * 2f));
 
         float objectBottom = pos.y - objectHeightOffset;
-        float immersion = waterHeight - objectBottom;
+        float immersion = GetWaterHeight() - objectBottom;
 
         if (immersion > 0)
         {
@@ -97,5 +81,23 @@ public class FloatingObject : MonoBehaviour
         D = waterMaterial.GetVector(DirectionID);
         phi = waterMaterial.GetFloat(PhaseID);
         useGerstner = waterMaterial.GetFloat(UseGerstnerID) == 1f;
+    }
+
+    private float GetWaterHeight()
+    {
+        if (useGerstner)
+        {
+            float k = 2f * Mathf.PI / L;
+            float c = Mathf.Sqrt(Mathf.Abs(Physics.gravity.y) / k);
+            float f = k * (Vector2.Dot(new Vector2(D.x, D.y).normalized, new Vector2(transform.position.x, transform.position.z)) - c * Time.time + phi);
+            return A * Mathf.Cos(f);
+        }
+        else
+        {
+            D.Normalize();
+            float k = 2f * Mathf.PI / L;
+            float wavePhase = Vector2.Dot(new(D.x, D.y), new(transform.position.x, transform.position.z)) - S * Time.time + phi;
+            return A * Mathf.Sin(k * wavePhase);
+        }
     }
 }

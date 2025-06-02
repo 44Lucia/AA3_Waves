@@ -560,6 +560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boya (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6362967663961059837, guid: 16fcb400f4a5fc2429c905dea50e0fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6792634033021674401, guid: 16fcb400f4a5fc2429c905dea50e0fd2, type: 3}
       propertyPath: water
       value: 
@@ -723,6 +727,10 @@ PrefabInstance:
     - target: {fileID: 6362967663961059837, guid: 16fcb400f4a5fc2429c905dea50e0fd2, type: 3}
       propertyPath: m_Name
       value: Boya (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362967663961059837, guid: 16fcb400f4a5fc2429c905dea50e0fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6792634033021674401, guid: 16fcb400f4a5fc2429c905dea50e0fd2, type: 3}
       propertyPath: water
@@ -3149,6 +3157,10 @@ PrefabInstance:
     - target: {fileID: 6362967663961059837, guid: 16fcb400f4a5fc2429c905dea50e0fd2, type: 3}
       propertyPath: m_Name
       value: Boya (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362967663961059837, guid: 16fcb400f4a5fc2429c905dea50e0fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6792634033021674401, guid: 16fcb400f4a5fc2429c905dea50e0fd2, type: 3}
       propertyPath: water
